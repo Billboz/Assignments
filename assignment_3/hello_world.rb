@@ -1,2 +1,2 @@
-
-print "Hello World"
+#!/usr/bin/ruby
+puts "Hello World"
