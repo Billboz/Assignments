@@ -40,7 +40,6 @@ puts :bill.class
 # Create a String constant with any name you choose
 STRING = "test"
 # Change the value of that constant
-STRING1 = STRING
-STRING[0] = "R"
+STRING = "REST"
 # Print the constant's value to the screen
 puts STRING
