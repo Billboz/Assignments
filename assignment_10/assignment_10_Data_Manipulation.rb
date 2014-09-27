@@ -7,7 +7,7 @@
 print "type something"
 input = $stdin.gets.chomp.strip.reverse[0..-2].reverse
 puts input
-inputCount = input.count(" ")
+inputCount = input.count(" ")+1
 puts inputCount
 puts input.size
 #input1 = input.strip # stripped the blank spaces at the begining and end of the passage and put it into a new variable
