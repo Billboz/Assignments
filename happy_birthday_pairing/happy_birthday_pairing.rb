@@ -1,20 +1,26 @@
 #!/usr/bin/ruby/
 require 'date'
 
+
 print "What is your name?"
 nameS = $stdin.gets.chomp
-#puts names.class
+
+loop do
 print "What day is your birthday? (YYYY/MM/DD)"
 bdayS = $stdin.gets.chomp
-#puts bday.class
-#Date.parse converts the bdayS String to the bdayD Date
 bdayD = Date.parse bdayS
-#puts bday.class
 today = Date.today
-#puts today
-age = bdayD - today
-puts age
-puts age.numerator / 365
+
+  if today == bdayD
+    puts "HAPPY BIRTHDAY #{nameS.capitalize}!!"
+    break
+   else
+    age = today - bdayDs
+    age_now = age.numerator / 365
+    puts "Your age is #{age_now}.  I will ask you again tomorrow:)"
+  end
+end
+
 
 
 
