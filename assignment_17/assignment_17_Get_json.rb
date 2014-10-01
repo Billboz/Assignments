@@ -13,7 +13,7 @@
 #!/usr/local/bin/ruby/
 
 system "clear"
-
+#puts nothing
 puts "I will ask you questions until you give up!\n\n"
 puts "Press enter to begin."
 gets
