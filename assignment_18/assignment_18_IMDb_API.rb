@@ -11,7 +11,7 @@ QUERY_URL = "http://api.openweathermap.org/data/2.5/weather"
 
 loop do
   puts "Type a city and I will tell you the temperature there? (\\q to quit):"
-  city = gets.chomp
+  city = gets.chomp.capitalize
   break if city == '\q'
 
   puts "Searching for #{city}..."
@@ -22,13 +22,15 @@ loop do
 parsed_data = JSON.parse(raw_json)
 
 tempK = parsed_data ["main"]["temp"].to_i
-#temp = { 9.0 / 5 ( a - 273 ) + 32 }
+tempF = ( 9.0 / 5 * ( tempK - 273 ) + 32 )
 #temp = 9/5*a-273+32
+=begin
 b = 1.8 #9/5 intergers don't partially do decimals
 c = tempK - 273
 d = b*c
 tempF = d + 32
-puts "The current temperature in #{city} is #{tempF}."
+=end
+puts "The current temperature in #{city} is.... #{tempF}."
 
 puts "\n"
 end
