@@ -1,4 +1,0 @@
-"What is 1?"\n
-"What is 2?"\n
-"What is 3?"\n
-"What is 4?"\n
