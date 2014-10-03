@@ -13,41 +13,27 @@
 #!/usr/local/bin/ruby/
 
 system "clear"
-#puts nothing
 puts "I will ask you questions until you give up!\n\n"
 puts "Press enter to begin."
 gets
-
 
 require 'json'
 
 questions_json = File.read("questions.json")
 
-puts "questions_json is #{questions_json.size} class"
-puts questions_json
 questions = JSON.parse(questions_json)
-
 
 puts "questions is #{questions.class} class"
 
-
-#questions_file = File.new("question.txt", 'r')
-#questions = questions_file.readlines
-#puts questions.class
-#puts questions[0]
-#questions = ["What is 1?[0]", "What is 2?[1]", "What is 3?[2]", "What is 4?[3]"]
-#array.each_with_index{|val, index| puts "#{val} => #{index}"}
-
 qcount = 0
-
 
 user_ans = Array.new
 user_count = 0
 
  loop do
-  puts questions[qcount] #int
-  input = $stdin.gets.chomp #string
-  user_ans[user_count] = input #inum is an array
+  puts questions[qcount]
+  input = $stdin.gets.chomp
+  user_ans[user_count] = input
   break if input == ""
 
   if questions.size - 1 > qcount
@@ -58,6 +44,6 @@ user_count = 0
   user_count += 1
 end
 
- user_ans.each do |output|
-   puts " #{questions}#{output}"
- end
+ #user_ans.each do |output|
+#   puts " #{questions}#{output}"
+ #end
