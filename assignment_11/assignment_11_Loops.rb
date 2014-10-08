@@ -20,7 +20,6 @@ puts
 
 for num in 1..input
   puts("Inside the For Loop num = #{num}")
-  num +=1
 end
 puts "Your number was #{input}"
 
