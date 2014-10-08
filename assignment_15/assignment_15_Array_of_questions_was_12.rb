@@ -43,14 +43,8 @@ loop do
 
   end
 end
-#num = 0
 #binding.pry
-for num in 1..questions.size
+for num in 0...questions.size
     puts "#{questions[num]}" + " #{user_ans[num]}"
-    num +=2
-  #  puts "#{questions[0]}" + "#{user_ans[0]}" The data exists but I haven't figure out how to access [0] of the array
-  #  puts "#{questions[1]}" + "#{user_ans[1]}"  Also the incrementer doesn't seem to be working since what is printed
-  #  puts "#{questions[2]}" + "#{user_ans[2]}"   is only incremented by 1??
-  #  puts "#{questions[3]}" + "#{user_ans[3]}"
 end
 #  puts "#{questions[num]} #{user_ans[num]}"
