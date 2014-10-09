@@ -1,23 +1,18 @@
-require 'pry'
-class Person
-  #@@person_count = 0
-  attr_reader :first_name
-  attr_reader :last_name
-  attr_accessor :birthday
+require 'date'
 
-  def name
-    @name
-  end
+load 'person.rb'
 
 
+loop do
+  person = Person.new
+  puts "What is your first and last name?"
+  input = $stdin.gets
+  break if input.chomp.empty?
+  person.name(input)
 
+  puts "What is your birthday? (YYYY/MM/DD)"
+  bday = $stdin.gets
+  person.set_bday(bday)
 
-private
-
-
-
-
-
+  puts "Hello #{person.first_name}, I think you are #{person.age} years old.  Also, Mr/Mrs/Miss #{person.last_name} you are the #{Person.person_count} user."
 end
-
-binding.pry
