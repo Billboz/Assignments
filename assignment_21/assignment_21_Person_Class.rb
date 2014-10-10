@@ -7,6 +7,7 @@ loop do
   person = Person.new
   puts "What is your first and last name?"
   input = $stdin.gets
+debugger  
   break if input.chomp.empty?
   person.name(input)
 
