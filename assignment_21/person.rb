@@ -2,7 +2,7 @@ class Person
   @@person_count = 0
   attr_reader   :first_name, :last_name
   attr_accessor :age
-  
+
   def initialize
     @@person_count += 1
   end
@@ -14,6 +14,7 @@ class Person
   def set_bday(bday)
     calc_age(bday)
   end
+binding.pry
 
   def name(name)
     @first_name  = name.split[0].capitalize

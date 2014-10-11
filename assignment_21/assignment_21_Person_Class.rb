@@ -1,4 +1,5 @@
 require 'date'
+require 'pry'
 
 load 'person.rb'
 
