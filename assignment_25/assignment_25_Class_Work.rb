@@ -8,14 +8,19 @@ class Employee
 
   attr_accessor :name
   attr_accessor :city
-end
+  attr_accessor :id
+  #attr_accessor :neme, :city, :id
 
+end
+#break
 class Company
 
   attr_accessor :name
   attr_accessor :city
   attr_accessor :employees
+  #attr_accessor :name, :city, :employees
 
+  def 
   # Adds the passed employee to the company employee list
   def hire_employee(employee)
     self.employees
@@ -24,7 +29,7 @@ class Company
 
   # Removes the passed employee from the company employee list
   def fire_employee(employee)
-    
+
   end
 end
 
