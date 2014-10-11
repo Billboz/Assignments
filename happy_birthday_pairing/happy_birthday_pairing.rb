@@ -15,7 +15,7 @@ today = Date.today
     puts "HAPPY BIRTHDAY #{nameS.capitalize}!!"
     break
    else
-    age = today - bdayDs
+    age = today - bdayD 
     age_now = age.numerator / 365
     puts "Your age is #{age_now}.  I will ask you again tomorrow:)"
   end
