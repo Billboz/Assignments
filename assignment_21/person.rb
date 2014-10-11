@@ -2,10 +2,7 @@ class Person
   @@person_count = 0
   attr_reader   :first_name, :last_name
   attr_accessor :age
-
-require "pry"
-require "debugger"
-
+  
   def initialize
     @@person_count += 1
   end
