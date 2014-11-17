@@ -19,20 +19,20 @@ loop do
 
   uri = URI(QUERY_URL + "?q=#{URI.escape(city)}")
   raw_json = Net::HTTP.get(uri)
-parsed_data = JSON.parse(raw_json)
+  parsed_data = JSON.parse(raw_json)
 
-tempK = parsed_data ["main"]["temp"].to_i
-tempF = ( 9.0 / 5 * ( tempK - 273 ) + 32 )
-#temp = 9/5*a-273+32
+  tempK = parsed_data ["main"]["temp"].to_i
+  tempF = ( 9.0 / 5 * ( tempK - 273 ) + 32 )
+  #temp = 9/5*a-273+32
 =begin
-b = 1.8 #9/5 intergers don't partially do decimals
-c = tempK - 273
-d = b*c
-tempF = d + 32
+  b = 1.8 #9/5 intergers don't partially do decimals
+  c = tempK - 273
+  d = b*c
+  tempF = d + 32
 =end
-puts "The current temperature in #{city} is.... #{tempF}."
+  puts "The current temperature in #{city} is.... #{tempF}."
 
-puts "\n"
+  puts "\n"
 end
 
 

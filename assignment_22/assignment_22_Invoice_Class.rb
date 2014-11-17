@@ -1,29 +1,30 @@
 #!usr/bin/ruby
+#require 'pry'
 
 load 'Invoice_Classes.rb'
+invoice = Invoice.new
 
 loop do
+    invoice_item = InvoiceItem.new
 
-  puts "Would you like to buy one of our great products?\n Press enter to continue and \\q to quit."
-  break if $stdin.gets.chomp == '\q'
+  puts 'What is product name?'
+    invoice_item.name          = $stdin.gets.chomp
+    break if invoice_item.name == ""
+  puts 'What is the sale price?'
+    invoice_item.price         = $stdin.gets.chomp
+  puts 'How many would you like?'
+    invoice_item.quantity      = $stdin.gets.chomp
 
-  invoice = Invoice.new
+  invoice.items << invoice_item
 
-  puts "What is product name?"
-    product_name     =$stdin.gets.chomp
-  puts "What is the sale price?"
-    sale_price       =$stdin.gets.chomp
-  puts "How many would you like?"
-    quantity         =$stdin.gets.chomp
-  puts "What is the sales tax for your area?"
-    tax_percentage   =$stdin.gets.chomp
+  #puts "invoice_item.total  #{invoice_item.total}"
+  #puts "invoice.item        #{invoice.items}"
+  puts "invoice.tax         #{invoice.tax}"
 
-  puts "Sale price:#{}\n"
-  puts "Quantity:#{}\n"
-  puts "What is the sales tax for your area#{}\n"
-  puts "Product name: #{}\n"
-
-  puts "subtotal is : #{}\n"
-  puts "sales tax is: #{}\n"
-  puts "TOTAL       : #{}\n"
 end
+
+  #puts "invoice.item        #{invoice.items}"
+  invoice.subtotal
+
+
+

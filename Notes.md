@@ -48,6 +48,7 @@ Stuff for ruby coding
 - pry-debug gem  Great step through and backtrace
 - debugger gem
 - I think ri-doc?
+- https://github.com/pry/pry/wiki/Available-plugins Great list of pry companion apps!
 
 try to get intellij
 
